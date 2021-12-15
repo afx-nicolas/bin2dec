@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="Binary to Decimal Conversor, Conversor, Convert to Decimal, bin2dec"
+    />
+    <meta name="author" content="Nicolas A. Feitoza" />
+    <meta name="description" content="A simple Binary to Decimal converter." />
+    <title>Convert Binary to Decimal | bin2dec</title>
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/custom.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container-header">
+        <img src="./assets/bin2dec-white.svg" alt="Logo bin2dec" />
+      </div>
+    </header>
+    <main class="main-container">
+      <!-- Home View -->
+      <section class="home-view">
+        <div class="container">
+          <h1 id="main-title">
+            A simple <b class="hover-title">binary</b> to
+            <b class="hover-title">decimal</b> converter
+          </h1>
+          <button
+            class="cta-btn w-hover"
+            onclick="scrollPage(this.dataset.targetPage)"
+            data-target-page="1"
+          >
+            Convert Now
+          </button>
+        </div>
+      </section>
+      <!-- Conversor View -->
+      <section class="conversor-view">
+        <div class="container">
+          <button
+            class="home-btn"
+            onclick="scrollPage(this.dataset.targetPage)"
+            data-target-page="0"
+          >
+            <div class="arrow"></div>
+          </button>
+          <img
+            class="conversor-view-logo"
+            src="./assets/bin2dec-black.svg"
+            alt="Logo bin2dec"
+          />
+          <form
+            action=""
+            class="conversor-form"
+            onsubmit="validateBinaryInput(event)"
+          >
+            <div class="binary-input">
+              <label for="binary">Binary</label>
+              <input
+                class="conversor-input"
+                type="number"
+                name="binary"
+                id="binary"
+                min="0"
+                maxlength="8"
+                placeholder="001010011"
+              />
+            </div>
+            <button class="b-hover convert-btn">Convert</button>
+            <div class="decimal-input">
+              <label for="decimal">Decimal</label>
+              <input
+                class="conversor-input"
+                type="number"
+                name="decimal"
+                id="decimal"
+                placeholder="128"
+                readonly
+              />
+            </div>
+          </form>
+        </div>
+      </section>
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container-footer">
+          <div class="credit">
+            <img src="./assets/bin2dec-white.svg" alt="Logo bin2dec" />
+            <span>By - Nicolas A. Feitoza</span>
+          </div>
+          <div class="social">
+            <a
+              href="https://github.com/afx-nicolas"
+              title="GitHub"
+              rel="noopener noreferrer"
+              target="_blank"
+              ><img src="./assets/GitHub.svg" alt="GitHub"
+            /></a>
+            <a
+              href="https://linkedin.com/in/nicolas-amaro-feitoza"
+              title="LinkedIn"
+              rel="noopener noreferrer"
+              target="_blank"
+              ><img src="./assets/LinkedIn.svg" alt="LinkedIn"
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
